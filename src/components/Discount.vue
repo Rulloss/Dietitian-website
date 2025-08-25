@@ -43,6 +43,8 @@
 
 <script>
 import Button from "../assets/Button.vue";
+import DoctorImage from "../assets/doctor.png";
+import DieticianImage from "../assets/dietician.png";
 
 export default {
   name: "Discount",
@@ -59,7 +61,7 @@ export default {
             "Transform your lifestyle with our comprehensive healthy living program. Get personalized nutrition plans and expert guidance.",
           buttonText: "Claim Offer",
           validity: "Valid until Dec 31, 2025",
-          image: "src/assets/doctor.png",
+          image: DoctorImage,
         },
         {
           tag: "15% OFF",
@@ -68,7 +70,7 @@ export default {
             "Achieve your weight goals with our scientifically-backed weight management program. Sustainable results guaranteed.",
           buttonText: "Start Journey",
           validity: "Valid until Dec 31, 2025",
-          image: "src/assets/dietician.png",
+          image: DieticianImage,
         },
       ],
     };
