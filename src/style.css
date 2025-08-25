@@ -1,0 +1,43 @@
+@import 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lexend:wght@100..900&display=swap';
+
+/* Base styles */
+
+:root {
+  --color-nutri-navy: #0F172A;
+  --color-nutri-deep: #F8FAFC;
+  --color-nutri-green: #2F9A61;
+  --color-nutri-green-light: #50b17acb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lexend", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-nutri-deep);
+  font-family: "Lexend", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+  min-width: 320px;
+}
+
+/* Layout helpers */
+html,
+body,
+#app {
+  height: fit-content;
+  margin: 0;
+  width: 100%;
+  max-width: 100vw;
+}
