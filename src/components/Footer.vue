@@ -6,7 +6,7 @@
         <!-- Logo ve Açıklama Bölümü -->
         <div class="footer-section">
           <div class="footer-logo">
-            <img src="../assets/Logo.svg" alt="Logo" class="logo-image" />
+            <img :src="logoImage" alt="Logo" class="logo-image" />
           </div>
           <p class="footer-description">
             Sağlıklı yaşam yolculuğunuzda güvenilir rehberiniz. Kişiselleştirilmiş beslenme planları ile hedeflerinize ulaşın.
@@ -109,8 +109,15 @@
 </template>
 
 <script>
+import LogoImage from "../assets/Logo.svg";
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      logoImage: LogoImage
+    };
+  }
 }
 </script>
 

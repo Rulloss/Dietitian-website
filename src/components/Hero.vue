@@ -31,7 +31,7 @@
         <!-- Sağ Taraf - Fotoğraf -->
         <div class="picture">
           <img
-            src="../assets/Diyetisyen.png"
+            :src="dieticianImage"
             alt="Diyetisyen"
             class="dietician-image"
           />
@@ -43,6 +43,7 @@
 
 <script>
 import Navbar from "../components/Navbar.vue";
+import DiyetisyenImage from "../assets/Diyetisyen.png";
 import Button from "../assets/Button.vue";
 import OutlineButton from "../assets/OutlineButton.vue";
 
@@ -53,6 +54,11 @@ export default {
     OutlineButton,
     Button,
   },
+  data() {
+    return {
+      dieticianImage: DiyetisyenImage
+    };
+  }
 };
 </script>
 

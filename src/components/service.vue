@@ -21,6 +21,11 @@
 <script>
 import Button from "../assets/Button.vue";
 import OutlineButton from "../assets/OutlineButton.vue";
+import AvocadoImage from "../assets/avacado.png";
+import WeightImage from "../assets/weight.png";
+import DumbbellImage from "../assets/dumbbell.png";
+import AllergiesImage from "../assets/allergies.png";
+import SaladImage from "../assets/salad.png";
 
 export default {
   name: "Service",
@@ -33,7 +38,7 @@ export default {
       services: [
         {
           id: 1,
-          imagePath: "src/assets/avacado.png",
+          imagePath: AvocadoImage,
           title: "Nutrition",
           subtitle: "Personalized Nutrition Plans",
           description:
@@ -42,7 +47,7 @@ export default {
         },
         {
           id: 2,
-          imagePath: "src/assets/weight.png",
+          imagePath: WeightImage,
           title: "Weight Management",
           subtitle: "Tailored Weight Management Programs",
           description:
@@ -51,7 +56,7 @@ export default {
         },
         {
           id: 3,
-          imagePath: "src/assets/dumbbell.png",
+          imagePath: DumbbellImage,
           title: "Sport",
           subtitle: "Sports & Performance Nutrition",
           description:
@@ -60,7 +65,7 @@ export default {
         },
         {
           id: 4,
-          imagePath: "src/assets/allergies.png",
+          imagePath: AllergiesImage,
           title: "Allergy",
           subtitle: "Food Allergy & Intolerance Management",
           description: "Personalized strategies to help you enjoy meals safely and comfortably.",
@@ -68,7 +73,7 @@ export default {
         },
         {
           id: 5,
-          imagePath: "src/assets/salad.png",
+          imagePath: SaladImage,
           title: "Healthy Living",
           subtitle: "Healthy Lifestyle Guidance",
           description:
