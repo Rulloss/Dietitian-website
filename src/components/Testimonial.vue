@@ -37,7 +37,7 @@
           </div>
           <div class="testimonial-author">
             <div class="author-avatar">
-              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Ayşe Demir" class="avatar-image">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ayşe Demir" class="avatar-image">
             </div>
             <div class="author-info">
               <h4 class="author-name">Sarah Johnson</h4>
