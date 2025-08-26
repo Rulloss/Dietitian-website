@@ -22,29 +22,13 @@
       <!-- Video Section -->
       <section class="video-section">
         <div class="video-container">
-          <div class="custom-video-player" @click="togglePlay">
-            <video
-              ref="videoPlayer"
-              :poster="videoPoster"
-              class="video-element"
-              @loadedmetadata="onVideoLoaded"
-              @play="onPlay"
-              @pause="onPause"
-              @ended="onEnded"
-            >
-              <source :src="videoSrc" type="video/mp4" />
-              Tarayıcınız video oynatmayı desteklemiyor.
-            </video>
-
-            <div v-if="!isPlaying" class="play-overlay">
-              <div class="play-button">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                  <circle cx="30" cy="30" r="30" fill="rgba(255,255,255,0.9)" />
-                  <path d="M25 20L40 30L25 40V20Z" fill="#2F9A61" />
-                </svg>
-              </div>
-            </div>
-          </div>
+          <iframe
+            src="https://drive.google.com/file/d/1kS4Tm1mr8pE7RCI3GPw5xSbcEpe77H1o/preview"
+            class="video-iframe"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay"
+          ></iframe>
         </div>
       </section>
 
@@ -80,7 +64,6 @@ import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Connect from "../components/Connect.vue"
 import Button from "../assets/Button.vue";
-import videoFile from "../assets/dietician.mp4";
 
 export default {
   name: "About",
@@ -138,61 +121,7 @@ export default {
             "Our approach combines nutrition science with mental wellness, creating a balanced foundation for your overall health and vitality.",
         },
       ],
-      
-      // Video Data
-      videoSrc: videoFile,
-      videoPoster: "",
-      isPlaying: false,
-      currentTime: 0,
-      duration: 0,
-      progress: 0,
     };
-  },
-  methods: {
-    togglePlay() {
-      const video = this.$refs.videoPlayer;
-      if (video.paused) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    },
-
-    onPlay() {
-      this.isPlaying = true;
-      this.updateProgress();
-    },
-
-    onPause() {
-      this.isPlaying = false;
-    },
-
-    onEnded() {
-      this.isPlaying = false;
-      this.progress = 0;
-      this.currentTime = 0;
-    },
-
-    onVideoLoaded() {
-      const video = this.$refs.videoPlayer;
-      this.duration = video.duration;
-    },
-
-    updateProgress() {
-      if (this.isPlaying) {
-        const video = this.$refs.videoPlayer;
-        this.currentTime = video.currentTime;
-        this.progress = (video.currentTime / video.duration) * 100;
-
-        requestAnimationFrame(this.updateProgress);
-      }
-    },
-
-    formatTime(seconds) {
-      const mins = Math.floor(seconds / 60);
-      const secs = Math.floor(seconds % 60);
-      return `${mins}:${secs.toString().padStart(2, "0")}`;
-    },
   },
 };
 </script>
@@ -272,45 +201,12 @@ export default {
   position: relative;
 }
 
-.custom-video-player {
-  position: relative;
-  cursor: pointer;
-  background: #000;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.video-element {
+.video-iframe {
   width: 100%;
   height: 450px;
-  object-fit: cover;
-  display: block;
-}
-
-.play-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-  z-index: 2;
-}
-
-.play-overlay:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.play-button {
-  transition: transform 0.3s ease;
-}
-
-.play-overlay:hover .play-button {
-  transform: scale(1.1);
+  border: none;
+  border-radius: 20px;
+  background: #000;
 }
 
 /* Approach Section */
@@ -407,7 +303,7 @@ export default {
     font-size: 36px;
   }
 
-  .video-element {
+  .video-iframe {
     height: 300px;
   }
 
@@ -435,7 +331,7 @@ export default {
     font-size: 28px;
   }
 
-  .video-element {
+  .video-iframe {
     height: 250px;
   }
 
