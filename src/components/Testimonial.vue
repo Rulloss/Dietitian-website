@@ -5,7 +5,7 @@
       <div class="section-header">
         <span class="tag">🌟 Customer Reviews 🌟</span>
         <h2 class="section-title">
-          Our Clients' <span class="highlight">Experiences</span>
+          Our Clients' <br><span class="highlight">Experiences</span>
         </h2>
         <p class="section-description">
           Discover the real stories of our clients who joined us on their
@@ -477,7 +477,7 @@ export default {
   }
   
   .section-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   
   .testimonials-grid {
@@ -510,7 +510,7 @@ export default {
   }
   
   .section-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     line-height: 1.1;
   }
   
