@@ -30,11 +30,7 @@
         </div>
         <!-- Sağ Taraf - Fotoğraf -->
         <div class="picture">
-          <img
-            :src="dieticianImage"
-            alt="Diyetisyen"
-            class="dietician-image"
-          />
+          <img :src="dieticianImage" alt="Diyetisyen" class="dietician-image" />
         </div>
       </div>
     </main>
@@ -56,9 +52,9 @@ export default {
   },
   data() {
     return {
-      dieticianImage: DiyetisyenImage
+      dieticianImage: DiyetisyenImage,
     };
-  }
+  },
 };
 </script>
 
@@ -130,10 +126,10 @@ export default {
 }
 
 /* Başlık */
-.title{
+.title {
   font-size: 3rem;
-  font-weight: 700; 
-  color: #0e3d2d; 
+  font-weight: 700;
+  color: #0e3d2d;
   margin-bottom: 1rem;
   line-height: 1.2;
   word-spacing: -5px;
@@ -142,7 +138,7 @@ export default {
 .title span {
   font-size: 3rem;
   font-weight: 700;
-  color: #1f2937; 
+  color: #1f2937;
   margin-bottom: 1rem;
   line-height: 1.2;
   background: linear-gradient(to right, #10b981, #047857);
@@ -162,7 +158,7 @@ export default {
 .button-container {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
@@ -170,8 +166,8 @@ export default {
 
 /* İletişim Butonu */
 .contact-button {
-  padding: 0.75rem 2rem; 
-  font-size: 1.125rem; 
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
 }
 
 /* Resim Bölümü (Sağ Taraf) */
@@ -246,6 +242,7 @@ export default {
 
   .button-container {
     justify-content: center;
+    margin: 12px 0px;
     gap: 12px;
   }
 
@@ -267,6 +264,7 @@ export default {
 
   .description {
     font-size: 1rem;
+    line-height: 1.5;
   }
 }
 
@@ -299,13 +297,15 @@ export default {
     flex-direction: column;
     gap: 10px;
     width: 100%;
+    margin: 12px 0px;
   }
 
   .contact-button {
     padding: 0.6rem 1.5rem;
     font-size: 1rem;
     width: 100%;
-    max-width: 250px;
+    justify-content: center;
+    max-width: 300px;
   }
 
   .dietician-image {
@@ -349,6 +349,7 @@ export default {
     padding: 0.5rem 1.2rem;
     font-size: 0.9rem;
     width: 100%;
+    justify-content: center;
     max-width: 200px;
   }
 
